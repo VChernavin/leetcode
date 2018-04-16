@@ -6,11 +6,7 @@ import java.util.Set;
 
 public class JevelsAndStones {
 
-	public static void main(String[] args) {
-		System.out.println(numJewelsInStones("aA","aAAbbbb"));
-	}
-
-	public static int numJewelsInStones(String J, String S) {
+	public int numJewelsInStones(String J, String S) {
 		Set<Integer> set = new HashSet<>();
 		for (char c : J.toCharArray()
 				) {
