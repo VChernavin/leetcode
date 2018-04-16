@@ -1,14 +1,11 @@
-package my.tests;
+package my.leetcode;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class HammingDistance {
 
-	public static void main(String[] args) {
-		System.out.println(new HammingDistance().hammingDistance(5, 9));
 
-	}
 
 	public int hammingDistance(int x, int y) {
 		List<Integer> b1 = intToBinarList(x);
