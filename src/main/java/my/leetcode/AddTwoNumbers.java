@@ -1,7 +1,5 @@
 package my.leetcode;
 
-
-
 public class AddTwoNumbers {
 	public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 		ListNode result = new ListNode(0);
@@ -15,15 +13,10 @@ public class AddTwoNumbers {
 			iterator = iterator.next;
 			transfer = sum / 10;
 
-			l1 = (l1!=null)?l1.next:null;
-			l2 = (l2!=null)?l2.next:null;
+			l1 = (l1 != null) ? l1.next : null;
+			l2 = (l2 != null) ? l2.next : null;
 
 		}
-
-		if(transfer>0) {
-			iterator.next=new ListNode(transfer);
-		}
-
 
 		return result.next;
 	}

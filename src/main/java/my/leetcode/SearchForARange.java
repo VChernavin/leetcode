@@ -14,7 +14,7 @@ public class SearchForARange {
 			return targetRange;
 		}
 
-		for (int j = nums.length-1; j >= 0; j--) {
+		for (int j = nums.length - 1; j >= 0; j--) {
 			if (nums[j] == target) {
 				targetRange[1] = j;
 				break;

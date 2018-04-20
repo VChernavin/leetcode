@@ -5,9 +5,7 @@ import java.util.List;
 
 import org.junit.Test;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
-
+import org.junit.Assert;
 
 public class FindDuplicateFileInSystemTest {
 	@Test
@@ -24,8 +22,8 @@ public class FindDuplicateFileInSystemTest {
 		expectedResult.add(efghFiles);
 		expectedResult.add(abcdFiles);
 		List<List<String>> actualResult = new FindDuplicateFileInSystem().findDuplicate(paths);
-		assertThat(expectedResult.get(0),is(actualResult.get(0)));
-		assertThat(expectedResult.get(1),is(actualResult.get(1)));
+		Assert.assertArrayEquals(expectedResult.get(0).toArray(), actualResult.get(0).toArray());
+		Assert.assertArrayEquals(expectedResult.get(1).toArray(), actualResult.get(1).toArray());
 
 	}
 }

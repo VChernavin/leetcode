@@ -3,6 +3,7 @@ package my.leetcode;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class FindDuplicateFileInSystem {
 	public List<List<String>> findDuplicate(String[] paths) {
@@ -18,9 +19,10 @@ public class FindDuplicateFileInSystem {
 			}
 		}
 		List<List<String>> res = new ArrayList<>();
-		for (String key : map.keySet()) {
-			if (map.get(key).size() > 1) {
-				res.add(map.get(key));
+		for (Map.Entry<String, List<String>> entry : map.entrySet()) {
+			List<String> value = entry.getValue();
+			if (value.size() > 1) {
+				res.add(value);
 			}
 		}
 		return res;
