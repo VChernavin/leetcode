@@ -11,9 +11,6 @@ public class MostCommonWord {
 	private String res;
 	private Set<String> banedSet;
 
-	public static void main(String[] args) {
-		System.out.println(new MostCommonWord().mostCommonWord("Bob!", new String[] {"hit"}));
-	}
 
 	public String mostCommonWord(String paragraph, String[] banned) {
 		if (paragraph == null || paragraph.equals("")) {
